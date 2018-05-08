@@ -6,5 +6,10 @@ az login
 
 az acs kubernetes install-cli
 kubectl config set-credentials cluster-admin --username=admin --password=admin
+ln -s /usr/local/bin/kubectl /usr/bin/kubectl
 
-az aks get-credentials --resource-group jsunaks0327 --name jsunAKSCluster
+echo "What's the name of the AKS resource group?"
+read rg
+echo "What's the name of the AKS cluster?"
+read name
+az aks get-credentials --resource-group $rg --name $name
