@@ -1,0 +1,26 @@
+jq=`rpm -qa | grep jq | wc -l`
+if [[ $jq -ne 1 ]]; then
+   yum install -y jq
+fi
+
+#Convert regular dashboard to importable dashboard
+sed s#\${DS_GPS}#GPS#g $1 | sed '1,43d' > /tmp/trim
+echo {  \"dashboard\": { `cat /tmp/trim` } > /tmp/generic.json
+
+#Now import
+grafanasvr=`kubectl get pod -n mapr-ts -o wide | grep grafana | awk '{print $6}'`
+influxdbsvr=`kubectl get pod -n mapr-ts -o wide | grep influx | awk '{print $6}'`
+
+key=`curl -k -s -u admin:admin -X POST -H 'Content-Type: application/json' -d '{"role":"Admin","name":"dashboard_api_key"}' "http://$grafanasvr:3000/api/auth/keys" | jq -r .key`
+
+curl -k -s -X POST -H "Content-Type:application/json" -H "Authorization: Bearer $key" -d "
+{
+  \"Name\":\"GPS\",
+  \"Type\":\"influxdb\",
+  \"url\":\"http://$influxdbsvr:8086\",
+  \"Access\":\"proxy\",
+  \"basicAuth\":false,
+  \"database\":\"coordinates\"
+}" "http://$grafanasvr:3000/api/datasources"
+
+curl -k -X POST -H "Content-Type:application/json" -H "Authorization: Bearer $key" "http://${grafanasvr}:3000/api/dashboards/import" -d @/tmp/generic.json

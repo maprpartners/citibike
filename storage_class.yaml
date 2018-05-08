@@ -1,0 +1,25 @@
+# Copyright (c) 2009 & onwards. MapR Tech, Inc., All rights reserved
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+   name: influxdb-maprfs
+   namespace: mapr-ts
+provisioner: mapr.com/maprfs
+parameters:
+    restServers: "10.0.0.4:8443"
+    cluster: "mapr600"
+    cldbHosts: "10.0.0.4"
+    securityType: "secure"
+    ticketSecretName: "mapr-ticket-secret"
+    ticketSecretNamespace: "mapr-ts"
+    maprSecretName: "mapr-provisioner-secrets"
+    maprSecretNamespace: "mapr-ts"
+    namePrefix: "influx"
+    mountPrefix: "/db"
+    advisoryquota: "100M"
+#   quota: "500M"
+#   type: "rw"
+#   mount: "1"
+#   readonly: "0"
+#   replication: "3"
+#   schedule: "2"
