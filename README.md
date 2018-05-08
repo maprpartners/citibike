@@ -13,6 +13,7 @@ Assign service principal AKSClusterxxxx as owner for the RG just created for Map
 login to Sandbox, sudo to become root
 
 curl -L https://raw.githubusercontent.com/maprpartners/citibike/master/inst_tools | bash
+Follow the instructions to login to your Azure account
 
 git clone https://github.com/maprpartners/citibike.git
 
