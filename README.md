@@ -24,6 +24,7 @@ Install MapR volume plugin
 bash inst_mapr_plugin | bash
 
 Deploy the citibike demo
+
 bash run
 
 
