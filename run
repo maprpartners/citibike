@@ -44,8 +44,6 @@ else
  ip=`kubectl get svc -n mapr-ts | grep grafana-svc | awk '{print $4}'`
  echo
  echo
- echo
- echo
  echo Now point your broswer at http://$ip:3000 to access Grafana UI, login: admin/admin
  exit 0
 fi
