@@ -1,0 +1,7 @@
+kubectl create -f http://package.mapr.com/tools/KubernetesDataFabric/v1.0.1/kdf-namespace.yaml
+kubectl create -f http://package.mapr.com/tools/KubernetesDataFabric/v1.0.1/kdf-rbac.yaml
+wget http://package.mapr.com/tools/KubernetesDataFabric/v1.0.1/kdf-plugin-azure.yaml -O /tmp/kdf-plugin-azure.yaml
+endpoint=`grep server ~/.kube/config | awk -F\/\/ '{print $2}'`
+sed -i s#changeme\!:443#$endpoint#g /tmp/kdf-plugin-azure.yaml
+kubectl create -f /tmp/kdf-plugin-azure.yaml
+kubectl create -f http://package.mapr.com/tools/KubernetesDataFabric/v1.0.1/kdf-provisioner.yaml
