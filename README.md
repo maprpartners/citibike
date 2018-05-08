@@ -23,7 +23,8 @@ cd citibike
 
 Install MapR volume plugin
 
-bash inst_mapr_plugin | bash
+bash inst_mapr_plugin 
+kubectl get pod --all-namespaces
 
 Deploy the citibike demo
 
