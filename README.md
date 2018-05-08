@@ -12,11 +12,11 @@ Assign service principal AKSClusterxxxx as owner for the RG just created for Map
 
 login to Sandbox, sudo to become root
 
+curl -L https://raw.githubusercontent.com/maprpartners/citibike/master/inst_tools | bash
+
 git clone https://github.com/maprpartners/citibike.git
 
 cd citibike
-
-bash inst_tools
 
 Install MapR volume plugin
 
