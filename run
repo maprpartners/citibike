@@ -1,5 +1,8 @@
 kubectl create namespace mapr-ts
 
+#storage class
+kubectl create -f storage_class.yaml
+
 #Influxdb
 maprticket=`cat /opt/mapr/conf/mapruserticket`
 base64_encoded=`echo -n $maprticket | base64 -w 0`
