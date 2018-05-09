@@ -8,7 +8,7 @@ create a AKS K8 cluster in the same vnet as MapR Sandbox
 
 manually using portal
 
-Assign service principal AKSClusterxxxx as owner for the RG just created for MapR Sandbox
+Assign service principal AKSClusterxxxx as contributor for the RG just created for MapR Sandbox, also add self as the owner of Service principal
 
 login to Sandbox, sudo to become root
 
