@@ -361,7 +361,7 @@
       "valueName": "current"
     }
   ],
-  "refresh": "15m",
+  "refresh": "5m",
   "schemaVersion": 16,
   "style": "dark",
   "tags": [],
@@ -390,7 +390,7 @@
     ]
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-15m",
     "to": "now"
   },
   "timepicker": {
