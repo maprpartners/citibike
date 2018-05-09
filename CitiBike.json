@@ -361,7 +361,7 @@
       "valueName": "current"
     }
   ],
-  "refresh": "5m",
+  "refresh": "15m",
   "schemaVersion": 16,
   "style": "dark",
   "tags": [],
