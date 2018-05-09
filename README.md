@@ -2,7 +2,7 @@
 
 create a MapR Sandbox
 
-https://bit.ly/2jINu8c
+https://tinyurl.com/y8q645xz
 
 create a AKS K8 cluster in the same vnet as MapR Sandbox
 
