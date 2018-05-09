@@ -37,7 +37,7 @@ Step 4: Configure K8s client on MapR Sandbox
 
     bash config-k8s
 
-    "kubectl get node -o wid" to verify it is working
+    "kubectl get node -o wide" to verify it is working
 
 Step 5: Install MapR Data Fabric for K8s volume plugin
 
