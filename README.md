@@ -20,15 +20,16 @@ Follow the instructions to login to your Azure account
 
 use  az account set if you have multiple subscriptions, use az aks list to find out K8s cluster name
 
-configure k8s
-
-curl -L https://raw.githubusercontent.com/maprpartners/citibike/master/config-k8s | bash
-
-kubectl get node -o wide
 
 git clone https://github.com/maprpartners/citibike.git
 
 cd citibike
+
+configure K8s
+
+bash config-k8s
+
+kubectl get node -o wide
 
 Install MapR volume plugin
 
