@@ -1,4 +1,4 @@
-# citibike
+# Citibike Demo with MapR Data Fabric for K8s
 
 create a MapR Sandbox
 
