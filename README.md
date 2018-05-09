@@ -12,10 +12,19 @@ Assign service principal AKSClusterxxxx as contributor for the RG just created f
 
 login to Sandbox, sudo to become root
 
-curl -L https://raw.githubusercontent.com/maprpartners/citibike/master/inst_tools | bash
+configure azcli
+
+curl -L https://raw.githubusercontent.com/maprpartners/citibike/master/config-azcli | bash
 
 Follow the instructions to login to your Azure account
+
 use  az account set if you have multiple subscriptions, use az aks list to find out K8s cluster name
+
+configure k8s
+
+curl -L https://raw.githubusercontent.com/maprpartners/citibike/master/config-k8s | bash
+
+kubectl get node -o wide
 
 git clone https://github.com/maprpartners/citibike.git
 
