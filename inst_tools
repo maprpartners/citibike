@@ -4,7 +4,7 @@ sudo sh -c 'echo -e "[azure-cli]\nname=Azure CLI\nbaseurl=https://packages.micro
 sudo yum -y install azure-cli
 az login
 
-echo "What's the name of the AKS resource group?"
+echo "What's the name of the resource group when you launched MapR Sandbox?"
 read rg
 echo "What's the name of the AKS cluster?"
 read name
