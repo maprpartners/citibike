@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: k8-grafana
-        image: jameshtsun/grafana:v5
+        image: maprpartners/grafana:v5
         imagePullPolicy: Always
         command:
           - "/bin/bash"

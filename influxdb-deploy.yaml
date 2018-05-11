@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: k8-influxdb
-        image: jameshtsun/influxdb
+        image: maprpartners/influxdb
         imagePullPolicy: Always
         command:
           - "/bin/bash"

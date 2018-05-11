@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: k8-citibike
-        image: jameshtsun/citibike
+        image: maprpartners/citibike
         imagePullPolicy: Always
         command:
           - "/bin/bash"
