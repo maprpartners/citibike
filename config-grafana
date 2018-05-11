@@ -17,10 +17,10 @@ curl -k -s -X POST -H "Content-Type:application/json" -H "Authorization: Bearer 
 {
   \"Name\":\"GPS\",
   \"Type\":\"influxdb\",
-  \"url\":\"http://$influxdbsvr:8086\",
+  \"url\":\"http://${influxdbsvr}:8086\",
   \"Access\":\"proxy\",
   \"basicAuth\":false,
   \"database\":\"coordinates\"
-}" "http://$grafanasvr:3000/api/datasources"
+}" "http://${grafanasvr}:3000/api/datasources"
 
 curl -k -s -X POST -H "Content-Type:application/json" -H "Authorization: Bearer $key" "http://${grafanasvr}:3000/api/dashboards/import" -d @/tmp/generic.json

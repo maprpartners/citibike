@@ -15,7 +15,7 @@ parameters:
     maprSecretName: "mapr-provisioner-secrets"
     maprSecretNamespace: "mapr-ts"
     namePrefix: "influx"
-    mountPrefix: "/db"
+    mountPrefix: "/tmp"
     advisoryquota: "100M"
 #   quota: "500M"
 #   type: "rw"
