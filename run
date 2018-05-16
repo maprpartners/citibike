@@ -9,9 +9,9 @@ base64_encoded=`echo -n $maprticket | base64 -w 0`
 /usr/bin/cp secrets.yaml /tmp
 sed -i s#^\ \ CONTAINER_TICKET:.*#\ \ CONTAINER_TICKET:\ $base64_encoded#g /tmp/secrets.yaml
 kubectl create -f /tmp/secrets.yaml
-sleep 5
+sleep 10
 kubectl create -f influxdb-pvc.yaml
-sleep 5
+sleep 10 
 kubectl create -f influxdb-deploy.yaml
 
 while true;
