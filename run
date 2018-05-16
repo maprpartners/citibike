@@ -9,7 +9,9 @@ base64_encoded=`echo -n $maprticket | base64 -w 0`
 /usr/bin/cp secrets.yaml /tmp
 sed -i s#^\ \ CONTAINER_TICKET:.*#\ \ CONTAINER_TICKET:\ $base64_encoded#g /tmp/secrets.yaml
 kubectl create -f /tmp/secrets.yaml
+sleep 5
 kubectl create -f influxdb-pvc.yaml
+sleep 5
 kubectl create -f influxdb-deploy.yaml
 
 while true;
@@ -30,6 +32,7 @@ influxdbIP=`kubectl get pod -n mapr-ts -o wide | grep influxdb | awk '{print $6}
 /usr/bin/cp citibike-deploy.yaml /tmp
 sed -i s#influxdbIP#$influxdbIP#g /tmp/citibike-deploy.yaml
 kubectl create -f citibike-pvc.yaml
+sleep 5
 kubectl create -f /tmp/citibike-deploy.yaml
 
 #Grafana

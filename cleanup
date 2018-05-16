@@ -1,0 +1,8 @@
+kubectl delete -f influxdb-deploy.yaml
+kubectl delete -f grafana-deploy.yaml
+kubectl delete -f grafana-svc.yaml
+kubectl delete -f simulator-deploy.yaml
+for i in `kubectl get pv -n mapr-ts | grep influxdb | awk '{print $1}'`; do kubectl delete pv -n mapr-ts $i; done
+kubectl delete -f /tmp/secrets.yaml
+kubectl delete namespace mapr-ts
+kubectl delete -f storage_class.yaml
