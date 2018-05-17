@@ -47,6 +47,8 @@ Step 5: Install MapR Data Fabric for K8s volume plugin
 
 Step 6: Deploy the citibike demo
 
+    modify storage_class.yaml, add IP address of MapR node to CLDBHOSTs and IP
+    
     bash run
 
     When completed, the script will provide a URL for you to look at the Demo
