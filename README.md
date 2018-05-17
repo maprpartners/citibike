@@ -6,27 +6,6 @@ Step 2: Create a MapR Sandbox in the same subnet where the K8s workers are in
 
     Go to https://tinyurl.com/y9jwz885
 
-Step 2: Create a AKS K8 cluster in the same vnet as MapR Sandbox
-
-    Manually using the Azure portal: https://portal.azure.com
-
-    Use the existing MapR Sandbox resource group in Step 1 when prompted.
-
-    Assign service principal AKSClusterxxxx as contributor for the RG just created for MapR Sandbox, also add self as the owner of Service principal
-
-Step 3: Install Azure Cli Tool
-
-    login to Sandbox, sudo to become root
-
-    curl -L https://raw.githubusercontent.com/maprpartners/citibike/master/config-azcli | bash
-
-    Follow the instructions to login to your Azure account
-
-    use "az account set" if you have multiple subscriptions, 
-
-    use "az aks list" to find out K8s cluster name from Step 2 if you forgot
-
-
 Step 4: Configure K8s client on MapR Sandbox
 
     login to the MapR Sandbox as root
