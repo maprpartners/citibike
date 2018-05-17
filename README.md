@@ -2,6 +2,8 @@
 
 Step 1: Create an EKS cluster by following this instruction
 
+    https://tinyurl.com/ybet9ao2
+
 Step 2: Configure K8s client on MapR Sandbox, yes, we are going 
 
     login to the MapR Sandbox as centos using your private key that was given in Step 2, then 'sudo su' to become root
