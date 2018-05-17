@@ -5,6 +5,8 @@ Step 1: Create an EKS cluster by following this instruction
 Step 2: Create a MapR Sandbox in the same subnet where the K8s workers are in
 
     Go to https://tinyurl.com/y9jwz885
+    
+    Minimal required parameters are: KeyName, and VpcSubentid(this is the same subnet id where your K8s workers are in, use Subnet0)
 
 Step 4: Configure K8s client on MapR Sandbox
 
