@@ -1,8 +1,6 @@
 kubectl create namespace mapr-ts
 
-echo "What's the MapR Sandbox's private IP?"
-read ip
-
+ip=`ifconfig -a | grep eth0 -A 1 | grep inet | awk '{print $2}'`
 #storage class
 cp storage_class.yaml /tmp
 sed -i s#changeme#$ip#g /tmp/storage_class.yaml
