@@ -1,0 +1,101 @@
+{"flyoutList": [
+    {"listItem": "AWS Home", "topTarget": "http://aws.amazon.com/?icmpid=docs_menu"},
+    {"listItem": "Compute", "subList": [
+        {"text": "Amazon EC2", "target": "http://aws.amazon.com/documentation/ec2/?icmpid=docs_menu"},
+        {"text": "Amazon ECS", "target": "http://aws.amazon.com/documentation/ecs/?icmpid=docs_menu"},
+        {"text": "Auto Scaling", "target": "http://aws.amazon.com/documentation/autoscaling/?icmpid=docs_menu"},
+        {"text": "Elastic Load Balancing", "target": "http://aws.amazon.com/documentation/elasticloadbalancing/?icmpid=docs_menu"},
+        {"text": "AWS Lambda", "target": "http://aws.amazon.com/documentation/lambda/?icmpid=docs_menu"}     
+    ]},
+    {"listItem": "Networking", "subList": [
+        {"text": "Amazon VPC", "target": "http://aws.amazon.com/documentation/vpc/?icmpid=docs_menu"},
+        {"text": "Amazon Route 53", "target": "http://aws.amazon.com/documentation/route53/?icmpid=docs_menu"},
+        {"text": "AWS Direct Connect", "target": "http://aws.amazon.com/documentation/direct-connect/?icmpid=docs_menu"}
+    ]},
+    {"listItem": "Enterprise Applications", "subList": [
+        {"text": "Amazon WorkSpaces", "target": "http://aws.amazon.com/documentation/workspaces/?icmpid=docs_menu"},
+        {"text": "Amazon WAM", "target": "http://aws.amazon.com/documentation/wam/?icmpid=docs_menu"},
+        {"text": "Amazon WorkDocs", "target": "http://aws.amazon.com/documentation/workdocs/?icmpid=docs_menu"},
+        {"text": "Amazon WorkMail (preview)", "target": "http://aws.amazon.com/documentation/workmail/?icmpid=docs_menu"}
+    ]},
+    {"listItem": "Analytics", "subList": [
+        {"text": "Amazon EMR", "target": "http://aws.amazon.com/documentation/elasticmapreduce/?icmpid=docs_menu"},
+        {"text": "Amazon Kinesis", "target": "http://aws.amazon.com/documentation/kinesis/?icmpid=docs_menu"},
+        {"text": "AWS Data Pipeline", "target": "http://aws.amazon.com/documentation/datapipeline/?icmpid=docs_menu"},
+        {"text": "Amazon Machine Learning", "target": "http://aws.amazon.com/documentation/machine-learning/?icmpid=docs_menu"}
+    ]},
+    {"listItem": "Deployment & Management", "subList": [
+        {"text": "AWS Elastic Beanstalk", "target": "http://aws.amazon.com/documentation/elastic-beanstalk/?icmpid=docs_menu"},
+        {"text": "AWS OpsWorks", "target": "http://aws.amazon.com/documentation/opsworks/?icmpid=docs_menu"},
+        {"text": "AWS CloudFormation", "target": "http://aws.amazon.com/documentation/cloudformation/?icmpid=docs_menu"},
+        {"text": "AWS CodeCommit", "target": "http://aws.amazon.com/documentation/codecommit/?icmpid=docs_menu"},
+        {"text": "AWS CodeDeploy", "target": "http://aws.amazon.com/documentation/codedeploy/?icmpid=docs_menu"},
+        {"text": "AWS CodePipeline", "target": "http://aws.amazon.com/documentation/codepipeline/?icmpid=docs_menu"}
+    ]},
+    {"listItem": "Administration & Security", "subList": [
+        {"text": "AWS Directory Service", "target": "http://aws.amazon.com/documentation/directory-service/?icmpid=docs_menu"},
+        {"text": "IAM", "target": "http://aws.amazon.com/documentation/iam/?icmpid=docs_menu"},
+        {"text": "AWS CloudTrail", "target": "http://aws.amazon.com/documentation/cloudtrail/?icmpid=docs_menu "},
+        {"text": "AWS Config", "target": "http://aws.amazon.com/documentation/config/?icmpid=docs_menu"},
+        {"text": "Amazon CloudWatch", "target": "http://aws.amazon.com/documentation/cloudwatch/?icmpid=docs_menu"},
+        {"text": "AWS KMS", "target": "http://aws.amazon.com/documentation/kms/?icmpid=docs_menu"},
+        {"text": "AWS CloudHSM", "target": "http://aws.amazon.com/documentation/cloudhsm/?icmpid=docs_menu"},
+        {"text": "AWS Service Catalog", "target": "http://aws.amazon.com/documentation/servicecatalog/?icmpid=docs_menu"}
+    ]},
+    {"listItem": "Mobile Services", "subList": [
+        {"text": "Amazon Cognito", "target": "http://docs.aws.amazon.com/cognito/devguide/?icmpid=docs_menu"},
+        {"text": "Amazon SNS", "target": "http://aws.amazon.com/documentation/sns/?icmpid=docs_menu"},
+        {"text": "AWS Device Farm", "target": "http://aws.amazon.com/documentation/devicefarm/?icmpid=docs_menu"},
+        {"text": "Amazon Mobile Analytics", "target": "http://aws.amazon.com/documentation/mobileanalytics/?icmpid=docs_menu"},
+        {"text": "AWS Mobile SDK for Android", "target": "http://aws.amazon.com/documentation/sdk-for-android/?icmpid=docs_menu"},
+        {"text": "AWS Mobile SDK for iOS", "target": "http://aws.amazon.com/documentation/sdk-for-ios/?icmpid=docs_menu"},
+        {"text": "AWS Mobile SDK for Unity", "target": "http://aws.amazon.com/documentation/sdk-for-unity/?icmpid=docs_menu"}
+    ]},
+    {"listItem": "Storage & Content Delivery ", "subList": [
+        {"text": "Amazon S3", "target": "http://aws.amazon.com/documentation/s3/?icmpid=docs_menu"},
+        {"text": "Amazon EFS (preview)", "target": "http://aws.amazon.com/documentation/efs/?icmpid=docs_menu"},
+        {"text": "AWS Storage Gateway", "target": "http://aws.amazon.com/documentation/storage-gateway/?icmpid=docs_menu"},
+        {"text": "Amazon Glacier", "target": "http://aws.amazon.com/documentation/glacier/?icmpid=docs_menu"},
+        {"text": "Amazon CloudFront", "target": "http://aws.amazon.com/documentation/cloudfront/?icmpid=docs_menu"},
+        {"text": "Amazon EBS", "target": "http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html?icmpid=docs_menu"},
+        {"text": "AWS Import/Export", "target": "http://aws.amazon.com/documentation/importexport/?icmpid=docs_menu"}
+    ]},
+    {"listItem": "Database", "subList": [
+        {"text": "Amazon RDS", "target": "http://aws.amazon.com/documentation/rds/?icmpid=docs_menu"},
+        {"text": "Amazon DynamoDB", "target": "http://aws.amazon.com/documentation/dynamodb/?icmpid=docs_menu"},
+        {"text": "Amazon ElastiCache", "target": "http://aws.amazon.com/documentation/elasticache/?icmpid=docs_menu"},
+        {"text": "Amazon Redshift", "target": "http://aws.amazon.com/documentation/redshift/?icmpid=docs_menu"},
+        {"text": "Amazon SimpleDB", "target": "http://aws.amazon.com/documentation/simpledb/?icmpid=docs_menu"}
+    ]},
+    {"listItem": "Application Services", "subList": [
+        {"text": "Amazon SQS", "target": "http://aws.amazon.com/documentation/sqs/?icmpid=docs_menu"},
+        {"text": "Amazon SWF", "target": "http://aws.amazon.com/documentation/swf/?icmpid=docs_menu"},
+        {"text": "Amazon AppStream", "target": "http://aws.amazon.com/documentation/appstream/?icmpid=docs_menu"},
+        {"text": "Amazon Elastic Transcoder", "target": "http://aws.amazon.com/documentation/elastic-transcoder/?icmpid=docs_menu"},
+        {"text": "Amazon SES", "target": "http://aws.amazon.com/documentation/ses/?icmpid=docs_menu"},
+        {"text": "Amazon CloudSearch", "target": "http://aws.amazon.com/documentation/cloudsearch/?icmpid=docs_menu"},
+        {"text": "Amazon API Gateway", "target": "http://aws.amazon.com/documentation/apigateway/?icmpid=docs_menu "}
+    ]},
+    {"listItem": "Resources", "subList": [
+        {"text": "AWS Billing and Cost Management", "target": "http://aws.amazon.com/documentation/accountbilling/?icmpid=docs_menu"},
+        {"text": "AWS Marketplace", "target": "http://aws.amazon.com/documentation/marketplace/?icmpid=docs_menu"},
+        {"text": "AWS Support", "target": "http://aws.amazon.com/documentation/awssupport/?icmpid=docs_menu"},
+        {"text": "AWS General Reference", "target": "http://docs.aws.amazon.com/general/latest/gr/?icmpid=docs_menu"},
+        {"text": "AWS Glossary", "target": "http://docs.aws.amazon.com/general/latest/gr/glos-chap.html?icmpid=docs_menu"}
+    ]},
+    {"listItem": "Related Links", "subList": [
+        {"text": "AWS Whitepapers", "target": "http://aws.amazon.com/whitepapers/?icmpid=docs_menu"},
+        {"text": "AWS Documentation on Kindle", "target": "http://aws.amazon.com/documentation/kindle/?icmpid=docs_menu"},
+        {"text": "AWS Training", "target": "http://aws.amazon.com/training/?icmpid=docs_menu"},
+        {"text": "AWS Case Studies", "target": "http://aws.amazon.com/solutions/case-studies/?icmpid=docs_menu"},
+        {"text": "AWS Documentation Archive", "target": "http://aws.amazon.com/archives/?icmpid=docs_menu"}
+    ]},
+    {"listItem": "Additional Software & Services", "subList": [
+        {"text": "Alexa Top Sites", "target": "http://aws.amazon.com/documentation/alexatopsites/?icmpid=docs_menu"},
+        {"text": "Alexa Web Information Service", "target": "http://aws.amazon.com/documentation/awis/?icmpid=docs_menu"},
+        {"text": "Amazon Silk", "target": "http://aws.amazon.com/documentation/silk/?icmpid=docs_menu"},
+        {"text": "AWS GovCloud (US)", "target": "http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/welcome.html?icmpid=docs_menu"},
+        {"text": "AWS Free Tier", "target": "https://aws.amazon.com/free/?icmpid=docs_menu"}
+    ]}
+    
+]}
