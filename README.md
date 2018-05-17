@@ -1,8 +1,10 @@
 # Citibike Demo with MapR Data Fabric for K8s
 
-Step 1: Create a MapR Sandbox
+Step 1: Create an EKS cluster by following this instruction
 
-    Go to https://tinyurl.com/y8q645xz
+Step 2: Create a MapR Sandbox in the same subnet where the K8s workers are in
+
+    Go to https://tinyurl.com/y9jwz885
 
 Step 2: Create a AKS K8 cluster in the same vnet as MapR Sandbox
 
