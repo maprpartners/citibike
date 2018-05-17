@@ -1,7 +1,7 @@
 wget https://amazon-eks.s3-us-west-2.amazonaws.com/2018-04-04/bin/linux/amd64/kubectl
 chmod 755 kubectl
 mv kubectl /usr/bin
-yum -y install git
+yum -y install git bind-utils
 pip install awscli
 aws configure
 
