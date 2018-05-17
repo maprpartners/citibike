@@ -7,6 +7,8 @@ Step 2: Create a MapR Sandbox in the same subnet where the K8s workers are in
     Go to https://tinyurl.com/y9jwz885
     
     Minimal required parameters are: KeyName, and VpcSubentid(this is the same subnet id where your K8s workers are in, use Subnet0)
+    
+    Also make sure that the network security group for the MapR Sandbox is modified to use the nsg of K8s workers
 
 Step 4: Configure K8s client on MapR Sandbox
 
