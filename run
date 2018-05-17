@@ -49,7 +49,7 @@ if [[ $output -eq 1 ]]; then
  t=`date`
  echo "Waiting for load balancer to become available ...."
 else
- sleep 5
+ sleep 20 
  sh config-grafana CitiBike.json
  ip=`kubectl get svc -n mapr-ts -o wide| grep grafana-svc | awk '{print $4}'`
  echo
