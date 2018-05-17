@@ -1,9 +1,31 @@
-echo "What's the name of the resource group when you launched MapR Sandbox?"
-read rg
-echo "What's the name of the AKS cluster?"
-read name
-az aks get-credentials --resource-group $rg --name $name
+wget https://amazon-eks.s3-us-west-2.amazonaws.com/2018-04-04/bin/linux/amd64/kubectl
+chmod 755 kubectl
+mv kubectl /usr/bin
+yum -y install git
+pip install awscli
+aws configure
 
-az acs kubernetes install-cli
-kubectl config set-credentials cluster-admin --username=admin --password=admin
-ln -s /usr/local/bin/kubectl /usr/bin/kubectl
+curl -O https://amazon-eks.s3-us-west-2.amazonaws.com/2018-04-04/eks-2017-11-01.normal.json
+aws configure add-model --service-model file://eks-2017-11-01.normal.json --service-name eks
+
+#eks console to create cluster
+
+
+cert=`aws eks describe-cluster --region us-west-2 --cluster-name jsuneks  --query cluster.certificateAuthority.data`
+url=`aws eks describe-cluster --region us-west-2 --cluster-name jsuneks --query cluster.masterEndpoint`
+
+mkdir -p ~/.kube
+
+cp config /tmp
+sed -i s#\<endpoint-url\>#$url#g /tmp/config
+sed -i s#\<base64-encoded-ca-cert\>#$cert#g /tmp/config
+
+echo "what's the cluster name"
+read clname
+sed -i s#\<cluster-name\>#$clname#g /tmp/config
+
+cp /tmp/config ~/.kube
+
+
+
+#create workers
