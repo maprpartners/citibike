@@ -40,14 +40,15 @@ kubectl create -f grafana-deploy.yaml
 kubectl create -f grafana-svc.yaml
 while true;
 do
-output=`kubectl get svc -n mapr-ts | grep grafana-svc |grep pending | wc -l`
+output=`kubectl get svc -n mapr-ts -o wide | grep grafana-svc |grep pending | wc -l`
 if [[ $output -eq 1 ]]; then
  sleep 5
  t=`date`
- echo "Waiting for load balancer to become available, est. 5 ~ 10 minutes: $t"
+ echo "Waiting for load balancer to become available ...."
 else
+ sleep 5
  sh config-grafana CitiBike.json
- ip=`kubectl get svc -n mapr-ts | grep grafana-svc | awk '{print $4}'`
+ ip=`kubectl get svc -n mapr-ts -o wide| grep grafana-svc | awk '{print $4}'`
  echo
  echo
  echo Now point your broswer at http://$ip:3000 to access Grafana UI, login: admin/admin
