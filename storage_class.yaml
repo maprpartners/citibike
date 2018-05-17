@@ -6,16 +6,16 @@ metadata:
    namespace: mapr-ts
 provisioner: mapr.com/maprfs
 parameters:
-    restServers: "10.0.0.4:8443"
+    restServers: "192.168.88.56:8443"
     cluster: "mapr600"
-    cldbHosts: "10.0.0.4"
+    cldbHosts: "192.168.88.56"
     securityType: "secure"
     ticketSecretName: "mapr-ticket-secret"
     ticketSecretNamespace: "mapr-ts"
     maprSecretName: "mapr-provisioner-secrets"
     maprSecretNamespace: "mapr-ts"
     namePrefix: "influx"
-    mountPrefix: "/tmp"
+    mountPrefix: "/db"
     advisoryquota: "100M"
 #   quota: "500M"
 #   type: "rw"

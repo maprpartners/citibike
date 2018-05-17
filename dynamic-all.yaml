@@ -1,0 +1,87 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: mapr-examples
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+   name: secure-maprfs
+   namespace: mapr-examples
+provisioner: mapr.com/maprfs
+parameters:
+    restServers: "192.168.88.56:8443"
+    cldbHosts: "192.168.88.56"
+    cluster: "mapr600"
+    securityType: "secure"
+    ticketSecretName: "mapr-ticket-secret"
+    ticketSecretNamespace: "mapr-examples"
+    maprSecretName: "mapr-provisioner-secrets"
+    maprSecretNamespace: "mapr-examples"
+    namePrefix: "pv"
+    mountPrefix: "/pv"
+    advisoryquota: "100M"
+    readOnly: “true”
+    reclaimPolicy: “Retain”
+#    readonly: “1”
+
+---
+
+kind: Pod
+apiVersion: v1
+metadata:
+  name: test-secure-provisioner
+  namespace: mapr-examples
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    args:
+    - sleep
+    - "1000000"
+    imagePullPolicy: Always
+    volumeMounts:
+      - name: maprfs-pvc
+        mountPath: "/dynvolume"
+  restartPolicy: "Never"
+  volumes:
+    - name: maprfs-pvc
+      persistentVolumeClaim:
+        claimName: maprfs-secure-pvc
+
+---
+
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: maprfs-secure-pvc
+  namespace: mapr-examples
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: secure-maprfs
+  resources:
+    requests:
+      storage: 300M
+---
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mapr-provisioner-secrets
+  namespace: mapr-examples
+type: Opaque
+data:
+  MAPR_CLUSTER_USER: bWFwcg== 
+  MAPR_CLUSTER_PASSWORD: bWFwcg==
+
+---
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mapr-ticket-secret
+  namespace: mapr-examples
+type: Opaque
+data:
+  CONTAINER_TICKET: bWFwcjYwMCBsYVdraEF5TlRVL0IzUjJmQis0UFViUXNnalhGSFovcFhEcG95bVVFMlRXWTZGQzdqTS95aFFkdldWOXVtSlZaS3U0aktnYTdYWHpBeDBUWEc3ZW0vZXRKeFE5bUh4MUczWXlNWStscTNGT3BJbU5ySHV2TldaQ1FFbW1lWG1FWUZtOFJ1V0tZVXlCUE1GbDZKWXYrQ0tWZTlEa3dSZzhKMGFKZnZSY2t4NGtRbFYyUFFqTHJIalA4cmVNZlRaTmhPaXhSa3NSVys0M2c4WGZwZC8vOFZCZm9LT2hZN3RLNEFYY1kzeFRXUitEMU5COE9sSmZ0TUVxcUkvV0U3eXNXNWppdlhXNGpreDlxVEdtQ1RMOUxVdnpDbzl0NWgvST0=
