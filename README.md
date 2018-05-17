@@ -2,15 +2,7 @@
 
 Step 1: Create an EKS cluster by following this instruction
 
-Step 2: Create a MapR Sandbox in the same subnet where the K8s workers are in
-
-    Go to https://tinyurl.com/y9jwz885
-    
-    Minimal required parameters are: KeyName, and VpcSubentid(this is the same subnet id where your K8s workers are in, use Subnet0)
-    
-    Also make sure that the network security group for the MapR Sandbox is modified to use the nsg of K8s workers
-
-Step 3: Configure K8s client on MapR Sandbox, yes, we are going 
+Step 2: Configure K8s client on MapR Sandbox, yes, we are going 
 
     login to the MapR Sandbox as centos using your private key that was given in Step 2, then 'sudo su' to become root
 
@@ -25,6 +17,14 @@ Step 3: Configure K8s client on MapR Sandbox, yes, we are going
     You will need to provide your AWS username, access key, secret and default zone (us-west-2) to configure the AWS Cli
 
     "kubectl get node -o wide" to verify it is working
+    
+Step 3: Create a MapR Sandbox in the same subnet where the K8s workers are in
+
+    Go to https://tinyurl.com/y9jwz885
+    
+    Minimal required parameters are: KeyName, and VpcSubentid(this is the same subnet id where your K8s workers are in, use Subnet0)
+    
+    Also make sure that the network security group for the MapR Sandbox is modified to use the nsg of K8s workers
 
 Step 4: Install MapR Data Fabric for K8s volume plugin
 
