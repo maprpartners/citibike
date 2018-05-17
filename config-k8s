@@ -8,8 +8,6 @@ aws configure
 curl -O https://amazon-eks.s3-us-west-2.amazonaws.com/2018-04-04/eks-2017-11-01.normal.json
 aws configure add-model --service-model file://eks-2017-11-01.normal.json --service-name eks
 
-#eks console to create cluster
-
 
 cert=`aws eks describe-cluster --region us-west-2 --cluster-name jsuneks  --query cluster.certificateAuthority.data`
 url=`aws eks describe-cluster --region us-west-2 --cluster-name jsuneks --query cluster.masterEndpoint`
@@ -26,6 +24,3 @@ sed -i s#\<cluster-name\>#$clname#g /tmp/config
 
 cp /tmp/config ~/.kube
 
-
-
-#create workers
