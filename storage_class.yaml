@@ -6,9 +6,9 @@ metadata:
    namespace: mapr-ts
 provisioner: mapr.com/maprfs
 parameters:
-    restServers: "192.168.88.56:8443"
+    restServers: "changeme:8443"
     cluster: "mapr600"
-    cldbHosts: "192.168.88.56"
+    cldbHosts: "changeme"
     securityType: "secure"
     ticketSecretName: "mapr-ticket-secret"
     ticketSecretNamespace: "mapr-ts"

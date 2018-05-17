@@ -1,7 +1,12 @@
 kubectl create namespace mapr-ts
 
+echo "What's the MapR Sandbox's private IP?"
+read ip
+
 #storage class
-kubectl create -f storage_class.yaml
+cp storage_class.yaml /tmp
+sed -i s#changeme#$ip#g /tmp/storage_class.yaml
+kubectl create -f /tmp/storage_class.yaml
 
 #Influxdb
 maprticket=`cat /opt/mapr/conf/mapruserticket`
