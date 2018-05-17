@@ -47,7 +47,7 @@ output=`kubectl get svc -n mapr-ts -o wide | grep grafana-svc |grep pending | wc
 if [[ $output -eq 1 ]]; then
  sleep 5
  t=`date`
- echo "Waiting for load balancer to become available ...."
+ echo "$t Waiting for load balancer to become available ...."
 else
  sleep 20 
  sh config-grafana CitiBike.json
