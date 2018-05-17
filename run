@@ -51,6 +51,8 @@ if [[ $output -eq 1 ]]; then
 else
  sleep 20 
  sh config-grafana CitiBike.json
+ echo "Configuring Grafana..."
+ sleep 10 
  ip=`kubectl get svc -n mapr-ts -o wide| grep grafana-svc | awk '{print $4}'`
  echo
  echo
