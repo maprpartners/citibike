@@ -1,6 +1,6 @@
 # Citibike Demo with MapR Data Fabric for K8s on AWS Elastice Kubernetes Service (EKS)
 
-Step 1: Create an EKS cluster by following this instruction, see section 'Getting Started with Amazon EKS' on page 3
+Step 1: Create an EKS cluster by following this instruction
 
     https://github.com/maprpartners/citibike/blob/master/eks-ug.pdf
     
