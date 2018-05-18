@@ -25,12 +25,13 @@ Step 4: Install MapR Data Fabric for K8s volume plugin
     #git clone https://github.com/maprpartners/citibike.git  
     #cd citibike 
     #bash inst_mapr_plugin 
-
-    kubectl get pod --all-namespaces to verify, you should see mapr-kdfplugin-xxx daemon set running on each K8s slave
+    
+    To verify, you should see mapr-kdfplugin-xxx daemon set running on each K8s slave
+    #kubectl get pod --all-namespaces
 
 Step 5: Deploy the citibike demo
  
-    bash run
+    #bash run
 
     When completed, the script will provide a URL for you to look at the Demo
 
