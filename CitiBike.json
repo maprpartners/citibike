@@ -58,7 +58,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1526832966365,
+  "iteration": 1526834096338,
   "links": [],
   "panels": [
     {
@@ -248,7 +248,7 @@
         }
       ],
       "thresholds": "15,30",
-      "title": "Citi Bike Stations in NYC",
+      "title": "Citi Bike Station: $stationID",
       "type": "grafana-worldmap-panel",
       "unitPlural": "",
       "unitSingle": "",
@@ -497,5 +497,5 @@
   "timezone": "",
   "title": "CitiBike",
   "uid": "kdJlOEGmk",
-  "version": 4
+  "version": 3
 }
