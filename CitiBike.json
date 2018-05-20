@@ -22,7 +22,7 @@
       "name": "Worldmap Panel",
       "version": "0.0.21"
     },
-    
+    {
       "type": "panel",
       "id": "graph",
       "name": "Graph",
@@ -58,7 +58,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1525461855276,
+  "iteration": 1526832966365,
   "links": [],
   "panels": [
     {
@@ -73,8 +73,8 @@
       "datasource": "${DS_GPS}",
       "fill": 1,
       "gridPos": {
-        "h": 7,
-        "w": 16,
+        "h": 9,
+        "w": 9,
         "x": 0,
         "y": 0
       },
@@ -121,7 +121,7 @@
           ],
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT metric as \"availBikes\", capacity  FROM \"Citi\" WHERE id =~ /^$stationID$/ and  $timeFilter ",
+          "query": "SELECT metric as \"availBikes\", capacity FROM \"Citi\" WHERE id =~ /^$stationID$/ and $timeFilter ",
           "rawQuery": true,
           "refId": "A",
           "resultFormat": "time_series",
@@ -179,6 +179,82 @@
       ]
     },
     {
+      "circleMaxSize": "8",
+      "circleMinSize": "8",
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgb(37, 244, 1)"
+      ],
+      "datasource": "${DS_GPS}",
+      "decimals": 0,
+      "esMetric": "Count",
+      "gridPos": {
+        "h": 9,
+        "w": 7,
+        "x": 9,
+        "y": 0
+      },
+      "hideEmpty": true,
+      "hideZero": false,
+      "id": 4,
+      "initialZoom": "11",
+      "links": [],
+      "locationData": "table",
+      "mapCenter": "custom",
+      "mapCenterLatitude": "40.7793736",
+      "mapCenterLongitude": "-73.9867015",
+      "maxDataPoints": 1,
+      "showLegend": true,
+      "stickyLabels": false,
+      "tableLabel": "id",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT last(metric) AS \"metric\", \"geohash\", \"id\" FROM \"Citi\" WHERE $timeFilter and id =~ /^$stationID$/ group by id",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "15,30",
+      "title": "Citi Bike Stations in NYC",
+      "type": "grafana-worldmap-panel",
+      "unitPlural": "",
+      "unitSingle": "",
+      "valueName": "current"
+    },
+    {
       "cacheTimeout": null,
       "colorBackground": false,
       "colorValue": true,
@@ -197,7 +273,7 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 7,
+        "h": 9,
         "w": 7,
         "x": 16,
         "y": 0
@@ -256,7 +332,7 @@
           ],
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT last(metric) as \"availBikes\" FROM \"Citi\" WHERE id =~ /^$stationID$/ and  $timeFilter ",
+          "query": "SELECT last(metric) as \"availBikes\" FROM \"Citi\" WHERE id =~ /^$stationID$/ and $timeFilter ",
           "rawQuery": true,
           "refId": "A",
           "resultFormat": "time_series",
@@ -299,11 +375,11 @@
         "h": 15,
         "w": 23,
         "x": 0,
-        "y": 7
+        "y": 9
       },
       "hideEmpty": true,
       "hideZero": false,
-      "id": 4,
+      "id": 7,
       "initialZoom": "11",
       "links": [],
       "locationData": "table",
@@ -332,7 +408,7 @@
           ],
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT last(metric) AS \"metric\", \"geohash\", \"id\" FROM \"Citi\" WHERE $timeFilter  group by id",
+          "query": "SELECT last(metric) AS \"metric\", \"geohash\", \"id\" FROM \"Citi\" WHERE $timeFilter group by id",
           "rawQuery": true,
           "refId": "A",
           "resultFormat": "table",
@@ -390,7 +466,7 @@
     ]
   },
   "time": {
-    "from": "now-15m",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
@@ -421,5 +497,5 @@
   "timezone": "",
   "title": "CitiBike",
   "uid": "kdJlOEGmk",
-  "version": 20
+  "version": 4
 }
