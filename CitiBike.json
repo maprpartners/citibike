@@ -22,7 +22,7 @@
       "name": "Worldmap Panel",
       "version": "0.0.21"
     },
-    {
+    
       "type": "panel",
       "id": "graph",
       "name": "Graph",
@@ -285,8 +285,8 @@
       "valueName": "avg"
     },
     {
-      "circleMaxSize": "4",
-      "circleMinSize": "4",
+      "circleMaxSize": "2",
+      "circleMinSize": "2",
       "colors": [
         "rgba(245, 54, 54, 0.9)",
         "rgba(237, 129, 40, 0.89)",
