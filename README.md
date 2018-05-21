@@ -1,5 +1,7 @@
 # NYC Citibike Demo with MapR Data Fabric for K8s on AWS Elastice Kubernetes Service (EKS)
 
+![Alt text](https://github.com/maprpartners/citibike/blob/master/citibike-grafana.png?raw=true "NYC CitiBike")
+
 Step 1: Create an EKS cluster by following this instruction
 
     https://github.com/maprpartners/citibike/blob/master/eks-ug.pdf
