@@ -2,6 +2,10 @@
 
 ![Alt text](https://github.com/maprpartners/citibike/blob/master/citibike-grafana.png?raw=true "NYC CitiBike")
 
+Below is the architecture of the Demo and the data flow
+
+![Alt text](https://github.com/maprpartners/citibike/blob/master/demoarch.png "NYC CitiBike Demo Arch")
+
 Step 1: Create an EKS cluster by following this instruction
 
     https://github.com/maprpartners/citibike/blob/master/eks-ug.pdf
