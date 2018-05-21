@@ -41,5 +41,5 @@ Step 5: Deploy the citibike demo
  
     #bash run
 
-    When completed, the script will provide a URL for you to look at the Demo
+    When completed, the script will provide a URL for you to look at the real world demo in action
 
