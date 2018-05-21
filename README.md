@@ -14,7 +14,9 @@ Step 2: Create a MapR Sandbox in the same subnet where the K8s workers are in
 
 Step 3: Configure AWS Cli client on MapR Sandbox
 
-    login to the MapR Sandbox as centos using your private key that was given in Step 2, then 'sudo su' to become root. You will need to provide your AWS username, access key, secret and default zone (us-west-2) to configure the AWS Cli
+    In about 20 minutes, you will see a new VM in your EC2 portal named 'mapr600_sandbox_demo'. This is the MapR Sandbox.
+    login to the MapR Sandbox as centos using your private key that was given in Step 2, then 'sudo su' to become root. 
+    You will need to provide your AWS username, access key, secret and default zone (us-west-2) to configure the AWS Cli
     
     #yum -y install git
     #pip install awscli
