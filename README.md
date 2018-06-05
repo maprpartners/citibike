@@ -8,7 +8,7 @@ Below is the architecture of the Demo and the data flow
 
 Step 1: Create an EKS cluster by following this instruction
 
-    https://github.com/maprpartners/citibike/blob/master/eks-ug.pdf
+    https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html
     
 Step 2: Create a MapR Sandbox in the same subnet where the K8s workers are in
 
