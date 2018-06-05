@@ -1,6 +1,6 @@
 # NYC Citibike Demo with MapR Data Fabric for K8s on AWS Elastice Kubernetes Service (EKS)
 
-https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html
+![Alt text](https://github.com/maprpartners/citibike/blob/master/citibike-grafana.png?raw=true "NYC CitiBike")
 
 Below is the architecture of the Demo and the data flow
 
