@@ -6,7 +6,7 @@ wget https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/bin/linux/a
 chmod 755 heptio-authenticator-aws
 mv heptio-authenticator-aws /usr/bin
 
-yum -y install git bind-utils
+yum -y install git bind-utils jq
 pip install awscli --upgrade --user
 aws configure
 
