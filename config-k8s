@@ -14,9 +14,13 @@ clname=`aws eks list-clusters --region us-west-2 | jq .clusters[0] | sed 's/"//g
 cert=`aws eks describe-cluster --name $clname --query cluster.certificateAuthority.data`
 url=`aws eks describe-cluster --name $clname  --query cluster.endpoint`
 
-aws iam create-policy --policy-name myekspolicy  --policy-document file://ekspolicy.json
+aws iam create-policy --policy-name myekspolicy  --policy-document file://myekspolicy.json
+echo Creating policy....
+
+sleep 5
 roleName=`aws iam list-roles | jq .[] | grep MapR600 | grep -v Arn | awk -F\: '{print $2}' | sed 's/["|,]//g'`
 policyArn=`aws iam list-policies | grep myeks | grep -v PolicyName | awk -F\:\   '{print $2}' | sed 's/["|,]//g'`
+echo Attaching policy....
 aws iam attach-role-policy --role-name $roleName --policy-arn $policyArn
 
 mkdir -p ~/.kube
@@ -28,4 +32,4 @@ sed -i s#\<base64-encoded-ca-cert\>#$cert#g /tmp/config
 sed -i s#\<cluster-name\>#$clname#g /tmp/config
 
 cp /tmp/config ~/.kube
-
+echo Done..
