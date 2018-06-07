@@ -1,12 +1,14 @@
 wget https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/bin/linux/amd64/kubectl
 chmod 755 kubectl
 mv kubectl /usr/bin
+
+wget https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/bin/linux/amd64/heptio-authenticator-aws
+chmod 755 heptio-authenticator-aws
+mv heptio-authenticator-aws /usr/bin
+
 yum -y install git bind-utils
 pip install awscli --upgrade --user
 aws configure
-
-curl -O https://amazon-eks.s3-us-west-2.amazonaws.com/2018-04-04/eks-2017-11-01.normal.json
-aws configure add-model --service-model file://eks-2017-11-01.normal.json --service-name eks
 
 clname=`aws eks list-clusters --region us-west-2 | jq .clusters[0] | sed 's/"//g'`
 cert=`aws eks describe-cluster --name $clname --query cluster.certificateAuthority.data`
