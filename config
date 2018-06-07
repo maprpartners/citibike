@@ -15,7 +15,12 @@ preferences: {}
 users:
 - name: aws
   user:
-    auth-provider:
-      config:
-        cluster-id: <cluster-name>
-      name: aws
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      command: heptio-authenticator-aws
+      args:
+        - "token"
+        - "-i"
+        - "<cluster-name>"
+        # - "-r"
+        # - "<role-arn>"
