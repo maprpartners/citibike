@@ -44,8 +44,6 @@ Step 3: Configure AWS Cli client on MapR Sandbox
 
 Step 4: Install MapR Data Fabric for K8s volume plugin
 
-    #git clone https://github.com/maprpartners/citibike.git  
-    #cd citibike 
     #bash inst_mapr_plugin 
     
     To verify, you should see mapr-kdfplugin-xxx daemon set running on each K8s slave
