@@ -6,6 +6,10 @@ wget https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/bin/linux/a
 chmod 755 heptio-authenticator-aws
 mv heptio-authenticator-aws /usr/bin
 
+yum -y install git jq
+pip install awscli --upgrade --user
+aws configure  
+
 clname=`aws eks list-clusters --region us-west-2 | jq .clusters[0] | sed 's/"//g'`
 cert=`aws eks describe-cluster --name $clname --query cluster.certificateAuthority.data`
 url=`aws eks describe-cluster --name $clname  --query cluster.endpoint`
