@@ -33,7 +33,7 @@ Step 3: Configure AWS Cli client on MapR Sandbox
     
     #curl -L https://raw.githubusercontent.com/maprpartners/citibike/master/config-k8s | bash
     
-    This would complete "Step 2: Configure kubectl for Amazon EKS" in 
+    Above command would complete "Step 2: Configure kubectl for Amazon EKS" in 
     https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html for you automatically
     
     Now go back to https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html and complete 
