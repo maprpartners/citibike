@@ -31,9 +31,12 @@ Step 3: Configure AWS Cli client on MapR Sandbox
     login to the MapR Sandbox as centos using your private key that was given in Step 2, then 'sudo su' to become root. 
     You will need to provide your AWS username, access key, secret and default zone (us-west-2) to configure the AWS Cli
     
-    #curl -L https://raw.githubusercontent.com/maprpartners/citibike/master/config-k8s | bash
+    #yum -y install git
+    #git clone https://github.com/maprpartners/citibike.git
+    #cd citibike
+    #bash config-k8s
     
-    Above command would complete "Step 2: Configure kubectl for Amazon EKS" in 
+    Above commands would complete "Step 2: Configure kubectl for Amazon EKS" in 
     https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html for you automatically
     
     Now go back to https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html and complete 
