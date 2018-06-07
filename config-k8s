@@ -14,6 +14,11 @@ clname=`aws eks list-clusters --region us-west-2 | jq .clusters[0] | sed 's/"//g
 cert=`aws eks describe-cluster --name $clname --query cluster.certificateAuthority.data`
 url=`aws eks describe-cluster --name $clname  --query cluster.endpoint`
 
+aws iam create-policy --policy-name myekspolicy  --policy-document file://ekspolicy.json
+roleName=`aws iam list-roles | jq .[] | grep MapR600 | grep -v Arn | awk -F\: '{print $2}' | sed 's/["|,]//g'`
+policyArn=`aws iam list-policies | grep myeks | grep -v PolicyName | awk -F\:\   '{print $2}' | sed 's/["|,]//g'`
+aws iam attach-role-policy --role-name $roleName --policy-arn $policyArn
+
 mkdir -p ~/.kube
 
 cp config /tmp
