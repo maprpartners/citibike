@@ -32,4 +32,12 @@ sed -i s#\<base64-encoded-ca-cert\>#$cert#g /tmp/config
 sed -i s#\<cluster-name\>#$clname#g /tmp/config
 
 cp /tmp/config ~/.kube
+
+echo Adding security group to the Sandbox
+sandboxId=`aws ec2 describe-instances --filters "Name=tag:Name,Values=mapr600_sandbox_demo" | jq -r ".Reservations[] | .Instances[] | .InstanceId"`
+
+sg=`aws ec2 describe-instances --filters "Name=tag:Name,Values=*-Node" | jq -r ".Reservations[] | .Instances[] | .SecurityGroups[] | .GroupId" | uniq`
+
+aws ec2 modify-instance-attribute --instance-id $sandboxId --groups $sg
+
 echo Done..
