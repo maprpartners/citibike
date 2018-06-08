@@ -41,21 +41,15 @@ Step 3: Configure AWS Cli client on MapR Sandbox
     
     Now go back to https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html and complete 
     "Step 3: Launch and Configure Amazon EKS Worker Nodes"
-    
-Step 4: Associate K8s workers's security group with the MapR Sandbox
-
-    a. Go to the EC2 dashboard and get the security group ID for any of the K8s workers
-    b. Select the MapR Sandbox (mapr600_sandbox_demo), Click "Action" -> "Networking" -> "Change Security Groups"
-       add the security group ID from step a.
-
-Step 5: Install MapR Data Fabric for K8s volume plugin
+   
+Step 4: Install MapR Data Fabric for K8s volume plugin
 
     #bash inst_mapr_plugin 
     
     To verify, you should see mapr-kdfplugin-xxx daemon set running on each K8s slave
     #kubectl get pod --all-namespaces
 
-Step 6: Deploy the citibike demo
+Step 5: Deploy the citibike demo
  
     #bash run
 
