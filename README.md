@@ -1,12 +1,15 @@
 # NYC Citi Bike Demo with MapR Data Fabric for K8s on AWS Elastice Kubernetes Service (EKS)
 
-Read the blog post: https://mapr.com/blog/run-real-world-analytics-using-geospatial-data-with-mapr-running-on-amazon-elastic-container-service-for-kubernetes/
+Read the blog post: 
+https://mapr.com/blog/run-real-world-analytics-using-geospatial-data-with-mapr-running-on-amazon-elastic-container-service-for-kubernetes/
 
 ![Alt text](https://github.com/maprpartners/citibike/blob/master/citibike-grafana.png?raw=true "NYC CitiBike")
 
 Below is the architecture of the Demo and the data flow
 
 ![Alt text](https://github.com/maprpartners/citibike/blob/master/demoarch.png "NYC CitiBike Demo Arch")
+
+Step-by-Step Instructions:
 
 Step 1: Create an EKS cluster by following this instruction
 
